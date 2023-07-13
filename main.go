@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	authcontroller "github.com/ihksanghazi/go-auth-jwt/controllers/authController"
+	"github.com/ihksanghazi/go-auth-jwt/controllers/authcontroller"
 	"github.com/ihksanghazi/go-auth-jwt/models"
 )
 

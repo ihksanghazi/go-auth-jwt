@@ -34,6 +34,72 @@
 				},
 				"responses": {
 					"200": {
+						"description": "Berhasil Register",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"msg": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/login": {
+			"post": {
+				"tags": ["Authenticate"],
+				"description": "Login User",
+				"summary": "Login User",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"email": {
+										"type": "string"
+									},
+									"password": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Berhasil Login",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"msg": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/logout": {
+			"get": {
+				"tags": ["Authenticate"],
+				"description": "Logout User",
+				"summary": "Logout User",
+				"responses": {
+					"200": {
+						"description": "Berhasil Logout",
 						"content": {
 							"application/json": {
 								"schema": {
