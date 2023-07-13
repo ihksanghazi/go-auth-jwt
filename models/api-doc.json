@@ -1,0 +1,54 @@
+{
+	"openapi": "3.0.2",
+	"info": {
+		"title": "Go Auth Jwt",
+		"version": "1.0",
+		"description": "Membuat Authentikasi JWT dengan golang"
+	},
+	"servers": [{ "url": "http://localhost:5000" }],
+	"paths": {
+		"/register": {
+			"post": {
+				"tags": ["Authenticate"],
+				"description": "Register User",
+				"summary": "Register User",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string"
+									},
+									"email": {
+										"type": "string"
+									},
+									"password": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"msg": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
