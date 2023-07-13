@@ -17,3 +17,6 @@ POST http://localhost:5000/login
 
 ### Logout
 GET http://localhost:5000/logout
+
+### GET ALL PRODUCTS
+GET http://localhost:5000/api/products

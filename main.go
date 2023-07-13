@@ -6,6 +6,7 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/ihksanghazi/go-auth-jwt/controllers/authcontroller"
+	"github.com/ihksanghazi/go-auth-jwt/controllers/productcontroller"
 	"github.com/ihksanghazi/go-auth-jwt/models"
 )
 
@@ -17,6 +18,8 @@ func main() {
 	r.HandleFunc("/login",authcontroller.Login).Methods("POST")
 	r.HandleFunc("/register",authcontroller.Register).Methods("POST")
 	r.HandleFunc("/logout",authcontroller.Logout).Methods("GET")
+	
+	r.HandleFunc("/api/products",productcontroller.Index).Methods("GET")
 
 	log.Fatal(http.ListenAndServe(":5000", r))
 }
