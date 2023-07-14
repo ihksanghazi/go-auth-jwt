@@ -115,6 +115,53 @@
 					}
 				}
 			}
+		},
+		"/api/products": {
+			"get": {
+				"security": [
+					{
+						"jwtAuth": []
+					}
+				],
+				"tags": ["Products"],
+				"description": "Get All Products",
+				"summary": "Get All Products",
+				"responses": {
+					"200": {
+						"description": "Success Get All Products",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"id": {
+												"type": "number"
+											},
+											"name": {
+												"type": "string"
+											},
+											"stock": {
+												"type": "number"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"components": {
+		"securitySchemes": {
+			"jwtAuth": {
+				"type": "apiKey",
+				"in": "cookie",
+				"name": "token"
+			}
 		}
 	}
 }
